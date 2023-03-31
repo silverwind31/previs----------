@@ -1,0 +1,757 @@
+.main {
+    .bottom_actions.music {
+      gap: 10px;
+      bottom: 30px;
+      background: rgba(255, 255, 255, 0.35);
+      border-radius: 27px;
+      flex-direction: column;
+      .top_action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: absolute;
+        top: -10px;
+        width: 95%;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        z-index: 10;
+        left: 35px;
+        padding: 0 20px;
+        margin: 0 -20px;
+  
+        color: #9695a7;
+        .durations {
+          display: flex;
+          gap: 30px;
+          font-size: 14px;
+        }
+  
+        .logo {
+          position: absolute;
+          left: 47%;
+          width: 25px;
+          height: 25px;
+          display: block;
+        }
+      }
+      .actions_top.buttons {
+        gap: 80px;
+        padding-left: 47px;
+  
+        .actions_text {
+          display: flex;
+          gap: 23px;
+        }
+        .buttons {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          .play {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 19px;
+            color: #050038;
+  
+            @media screen and (max-width: 1130px) {
+              font-size: 14px;
+              line-height: 17px;
+            }
+          }
+  
+          a {
+            align-items: center;
+            gap: 9px;
+            font-weight: 700;
+          }
+        }
+  
+        @media screen and (max-width: 1130px) {
+          padding: 5px 0 8px 38px;
+        }
+      }
+      .actions_row.music {
+        width: 100vw;
+        padding-top: 40px;
+        @media screen and (max-width: 1130px) {
+          padding: 13px 0 10px 45px;
+          gap: 50px;
+  
+          .actions_item {
+            .action_image {
+              img {
+                width: 115px;
+                height: 72px;
+              }
+            }
+          }
+        }
+      }
+      .switch {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+  
+        a {
+          gap: 10px;
+        }
+      }
+    }
+    .music_edit.voice {
+      position: relative;
+      .edit_row {
+        justify-content: center;
+        gap: 20px;
+  
+        @media screen and (max-width: 992px) {
+          flex-direction: column-reverse;
+          gap: 20px;
+        }
+        .music_switch_row {
+          display: none;
+          flex: 0 0 auto;
+          width: 100%;
+          flex-direction: column;
+          border: 1px solid #cdccd7;
+          border-radius: 15px;
+          background-color: #fff;
+          .block_top {
+            border-bottom: 1px solid rgba(205, 204, 215, 0.72);
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            color: #9695a7;
+  
+            @media screen and (max-width: 500px) {
+              padding: 8px 10px;
+            }
+          }
+          .block_middle {
+            padding: 15px 30px;
+  
+            @media screen and (max-width: 500px) {
+              padding: 10px;
+            }
+          }
+          .actions_row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            overflow: auto;
+            width: 100%;
+  
+            .actions_item {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 10px;
+            }
+            .action_image {
+              border: 5px solid transparent;
+              transition: 0.3s all ease;
+              position: relative;
+              z-index: 1;
+  
+              &::before {
+                display: block;
+                content: "";
+                height: 100%;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.35);
+                border-radius: 11px;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+              &:hover {
+                border: 5px solid #ff6575;
+                border-radius: 15px;
+                &::before {
+                  display: none;
+                }
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  width: 20px;
+                  height: 20px;
+                  top: 7px;
+                  right: 8px;
+                  background-image: url(../images/exit_icon2.svg);
+                  background-repeat: no-repeat;
+                }
+              }
+            }
+            @media screen and (max-width: 500px) {
+              gap: 15px;
+            }
+          }
+          .block_bottom {
+            padding: 0 30px 25px 30px;
+            a {
+              justify-content: center;
+              gap: 10px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 17px;
+              padding: 5px 0;
+              background: #ebedf8;
+              border-radius: 7px;
+            }
+          }
+          @media screen and (max-width: 992px) {
+            display: flex;
+            position: static;
+          }
+        }
+      }
+      .template_title {
+        position: absolute;
+        top: -20px;
+        left: 0;
+  
+        &::before {
+          display: none;
+        }
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+      .edit_card {
+        flex: 0 0 auto;
+        width: 36%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+  
+        .upload_button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+  
+          .more {
+            display: none;
+  
+            @media screen and (max-width: 992px) {
+              display: flex;
+            }
+          }
+          a {
+            justify-content: center;
+            gap: 10px;
+          }
+          input {
+            display: none;
+            height: 28px;
+            background: #f0f0f3;
+            border: 1px solid #c5c4d1;
+            border-radius: 6px;
+            padding-left: 10px;
+  
+            &::placeholder {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 14px;
+              color: rgba(5, 0, 56, 0.23);
+            }
+            @media screen and (max-width: 1280px) {
+              display: flex;
+            }
+            @media screen and (max-width: 992px) {
+              display: none;
+            }
+          }
+          @media screen and (max-width: 1280px) {
+            gap: 26px;
+          }
+          @media screen and (max-width: 1130px) {
+            margin-bottom: 20px;
+          }
+          @media screen and (max-width: 992px) {
+            justify-content: space-between;
+          }
+          @media screen and (max-width: 500px) {
+            margin-bottom: 0;
+            justify-content: center;
+          }
+        }
+        .music_control {
+          display: none;
+          gap: 15px;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 25px;
+          .control_buttons {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+          }
+          input {
+            width: 180px;
+          }
+          @media screen and (max-width: 1280px) {
+            display: flex;
+          }
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
+        }
+        .card_music_control {
+          .music_manage > img {
+            @media screen and (max-width: 1130px) {
+              width: 20%;
+            }
+            @media screen and (max-width: 992px) {
+              width: 100%;
+            }
+          }
+          .music_manage_list {
+            height: 220px;
+  
+            @media screen and (max-width: 992px) {
+              height: 120px;
+            }
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          width: 34%;
+        }
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          order: 0;
+        }
+      }
+      .edit_block {
+        overflow: hidden;
+        flex: 0 0 auto;
+        width: 63%;
+        background: #ffffff;
+        border: 1px solid #cdccd7;
+        border-radius: 14px;
+        position: relative;
+  
+        .block_header {
+          display: flex;
+          justify-content: center;
+          img {
+            width: 100%;
+          }
+        }
+        .edit_actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 19px 20px 19px;
+          border-bottom: 2px dashed #f1f1f1;
+          position: relative;
+  
+          .actions_title {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #afafaf;
+  
+            @media screen and (max-width: 500px) {
+              display: none;
+            }
+          }
+          .play {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            width: 10px;
+  
+            @media screen and (max-width: 500px) {
+              display: flex;
+            }
+          }
+          .actions_description {
+            @media screen and (max-width: 500px) {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 14px;
+              color: #050038;
+            }
+          }
+  
+          @media screen and (max-width: 500px) {
+            padding: 12px 10px;
+          }
+        }
+        .audio_control {
+          display: flex;
+          align-items: center;
+          gap: 13px;
+          justify-content: center;
+          position: relative;
+          padding: 47px 15px;
+  
+          .audio_platform {
+            display: flex;
+            background: #ffd02f;
+            border-radius: 11px;
+            padding: 10px 59px;
+            position: relative;
+  
+            img {
+              width: 100%;
+            }
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-image: url(../images/music_control_layer.svg);
+              top: 0;
+              bottom: 0;
+              background-size: auto;
+              left: 35px;
+              z-index: 3;
+              background-repeat: no-repeat;
+              background-size: 90%;
+  
+              @media screen and (max-width: 500px) {
+                display: none;
+              }
+            }
+            @media screen and (max-width: 500px) {
+              background: #7e8cea;
+              border-radius: 7px;
+              padding: 8px 25px;
+            }
+          }
+          .time {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #050038;
+            position: absolute;
+            left: 110px;
+            top: -31px;
+  
+            @media screen and (max-width: 1280px) {
+              top: -25px;
+              left: 120px;
+            }
+            @media screen and (max-width: 500px) {
+              top: -30px;
+            }
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 3px;
+            height: 55px;
+            border-radius: 3px;
+            background: #000;
+            z-index: 10;
+            left: 180px;
+          }
+          @media screen and (max-width: 1280px) {
+            padding: 35px 17px;
+          }
+        }
+        .actions_button {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #050038;
+  
+          a {
+            align-items: center;
+            gap: 8px;
+  
+            &:nth-child(2) {
+              @media screen and (max-width: 500px) {
+                display: none;
+              }
+            }
+          }
+        }
+        .edit_footer {
+          border-top: 2px dashed #f1f1f1;
+          .footer_row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+          }
+          .row_item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+  
+            .volume_img {
+              @media screen and (max-width: 500px) {
+                display: none;
+              }
+            }
+            input {
+              max-width: 97px;
+  
+              @media screen and (max-width: 500px) {
+                max-width: 58px;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          width: 60%;
+        }
+        @media screen and (max-width: 1130px) {
+          &::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: #fff;
+            left: 0;
+            top: 0;
+            position: absolute;
+            z-index: 11;
+          }
+        }
+        @media screen and (max-width: 992px) {
+          width: 100%;
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+    .music_switch_block {
+      border-radius: 27px;
+      position: fixed;
+      left: 130px;
+      bottom: 20px;
+      width: calc(100vw - 146px);
+      background: #f5f5f7;
+      z-index: 100;
+  
+      .block_top {
+        display: flex;
+        align-items: center;
+        position: relative;
+  
+        .durations {
+          top: -10px;
+          right: 28px;
+          position: absolute;
+          display: flex;
+          gap: 20px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+          color: #9695a7;
+        }
+        .play_action {
+          width: 36px;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+      .block_middle {
+        .actions_row {
+          width: 100%;
+          padding: 24px 30px 0 30px;
+          display: flex;
+          align-items: center;
+          gap: 26px;
+          overflow: auto;
+          .actions_item {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 11px;
+  
+            .action_image {
+              border: 5px solid transparent;
+              transition: 0.3s all ease;
+              position: relative;
+              z-index: 1;
+  
+              &::before {
+                display: block;
+                content: "";
+                height: 100%;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.35);
+                border-radius: 11px;
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+              &:hover {
+                border: 5px solid #ff6575;
+                border-radius: 15px;
+                &::before {
+                  display: none;
+                }
+                &::after {
+                  content: "";
+                  display: block;
+                  position: absolute;
+                  width: 20px;
+                  height: 20px;
+                  top: 7px;
+                  right: 8px;
+                  background-image: url(../images/exit_icon2.svg);
+                  background-repeat: no-repeat;
+                }
+              }
+  
+              img {
+                @media screen and (max-width: 1130px) {
+                  height: 70px;
+                }
+                @media screen and (max-width: 1025px) {
+                  height: 60px;
+                }
+                @media screen and (max-width: 992px) {
+                  height: auto;
+                  width: auto;
+                }
+                @media screen and (max-width: 500px) {
+                  width: 90px;
+                }
+              }
+            }
+            @media screen and (max-width: 1130px) {
+              gap: 5px;
+            }
+          }
+  
+          @media screen and (max-width: 1025px) {
+            gap: 20px;
+          }
+          @media screen and (max-width: 992px) {
+            gap: 36px;
+          }
+        }
+      }
+      .block_bottom {
+        border-top: 1px solid rgba(205, 204, 215, 0.72);
+        margin-top: 15px;
+        padding: 8px 0;
+        display: flex;
+        justify-content: center;
+        a {
+          gap: 10px;
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        left: 25px;
+        width: calc(100% - 50px);
+      }
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+    .content_voice {
+      width: calc(100% - 116px);
+      padding: 15px;
+      margin-left: auto;
+      margin-top: 66px;
+      min-height: calc(100vh + 35px);
+  
+      @media screen and (max-width: 1280px) {
+        width: 100%;
+        margin-left: auto;
+      }
+      @media screen and (max-width: 992px) {
+        flex-direction: column;
+        margin-top: 82px;
+        padding: 0 30px;
+      }
+      @media screen and (max-width: 744px) {
+        padding: 0 5px;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 0 20px;
+      }
+      @media screen and (max-width: 390px) {
+        padding: 0 5px;
+      }
+    }
+    .library_control_2 {
+      border-top: 1px solid rgba(205, 204, 215, 0.72);
+      border-bottom: 1px solid rgba(205, 204, 215, 0.72);
+      position: fixed;
+      bottom: 71px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      padding: 20px 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background-color: #f3f3f6;
+      gap: 42px;
+  
+      .search {
+        height: 28px;
+        width: 120px;
+        background: #f0f0f3;
+        border: 1px solid #c5c4d1;
+        border-radius: 6px;
+        outline: none;
+        padding: 6px 0 7px 11px;
+  
+        &::placeholder {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: rgba(5, 0, 56, 0.23);
+        }
+  
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      .music_control {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+      input {
+        width: 190px;
+        background-color: transparent;
+      }
+      .control_buttons {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .time {
+        display: flex;
+        align-items: center;
+      }
+  
+      @media screen and (max-width: 992px) {
+        display: flex;
+      }
+    }
+  }
+  

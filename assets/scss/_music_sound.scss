@@ -1,0 +1,958 @@
+.main {
+    .top_menu.music {
+      .top_menu_row {
+        white-space: nowrap;
+        padding: 18px 30px 18px 27px;
+        .top_menu_left {
+          .actions_move {
+            display: flex !important;
+            align-items: center;
+            gap: 15px;
+          }
+          .tutorial {
+            .question_item {
+              display: flex !important;
+            }
+            @media screen and (max-width: 1280px) {
+              display: none;
+            }
+          }
+        }
+        .top_menu_right {
+          gap: 46px;
+  
+          .tutorial {
+            .watch_tutorial {
+              display: none !important;
+  
+              @media screen and (max-width: 1280px) {
+                display: flex !important;
+              }
+              @media screen and (max-width: 390px) {
+                display: none !important;
+              }
+            }
+            .question_item {
+              @media screen and (max-width: 500px) {
+                display: flex;
+              }
+            }
+          }
+          .action_buttons {
+            display: flex;
+            align-items: center;
+            gap: 21px;
+            position: relative;
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              height: 30px;
+              width: 2px;
+              right: -24px;
+              background-color: #cdccd7;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+  
+              @media screen and (max-width: 1280px) {
+                display: none;
+              }
+            }
+            .new_scene_button {
+              @media screen and (max-width: 1280px) {
+                display: none;
+              }
+              @media screen and (max-width: 992px) {
+                display: flex;
+                order: 2;
+                color: #3f53d9;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                border: 1px solid #3f53d9;
+                border-radius: 7px;
+                padding: 10px 21px;
+              }
+            }
+          }
+          @media screen and (max-width: 1280px) {
+            gap: 22px;
+          }
+          @media screen and (max-width: 500px) {
+            display: flex !important;
+          }
+        }
+        .menu_list {
+          display: none;
+          @media screen and (max-width: 1280px) {
+            display: flex;
+            gap: 36px;
+          }
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
+          .list_item {
+            flex-direction: column;
+            gap: 2px;
+            &:nth-child(4):hover {
+              svg path:first-child {
+                opacity: 1;
+              }
+              svg path:nth-child(2) {
+                fill: white;
+              }
+              svg path:nth-child(3) {
+                fill: white;
+              }
+            }
+            &:nth-child(5):hover {
+              svg path:first-child {
+                opacity: 1;
+              }
+              svg path:nth-child(2) {
+                fill: white;
+              }
+            }
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          padding: 9px 30px;
+        }
+        @media screen and (max-width: 500px) {
+          padding: 9px 24px;
+        }
+      }
+      .top_menu_middle {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+  
+        .search {
+          height: 28px;
+          background: #f0f0f3;
+          border: 1px solid #c5c4d1;
+          border-radius: 6px;
+          outline: none;
+          padding: 6px 0 7px 11px;
+  
+          &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: rgba(5, 0, 56, 0.23);
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+      .music_control {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+  
+        input {
+          width: 250px;
+          background-color: transparent;
+  
+          @media screen and (max-width: 1280px) {
+            width: 200px;
+          }
+          @media screen and (max-width: 1200px) {
+            width: 150px;
+          }
+        }
+      }
+      .control_buttons {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+    }
+    .music_edit {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+  
+      .template_text {
+        position: absolute;
+        left: 154px;
+        top: 78px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #afacbd;
+  
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        order: 2;
+        width: 100%;
+      }
+    }
+    .edit_row {
+      display: flex;
+      align-items: stretch !important;
+      justify-content: space-between;
+      gap: 0 20px;
+      padding-top: 30px;
+  
+      @media screen and (max-width: 1280px) {
+        gap: 0;
+        flex-wrap: wrap;
+        padding-top: 0;
+      }
+      @media screen and (max-width: 992px) {
+        gap: 15px;
+        width: 100%;
+      }
+    }
+    .edit_card {
+      background: #ffffff;
+      border: 1px solid #cdccd7;
+      border-radius: 14px;
+      padding: 25px 12px 21px 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .upload_button {
+        position: relative;
+        margin-bottom: 30px;
+        .upload {
+          justify-content: center;
+          gap: 11px;
+          align-items: center;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: #050038;
+        }
+        .more {
+          display: none;
+          @media screen and (max-width: 992px) {
+            display: flex;
+          }
+          @media screen and (max-width: 500px) {
+            position: absolute;
+            top: 10px;
+            right: 30px;
+          }
+        }
+        @media screen and (max-width: 992px) {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        @media screen and (max-width: 500px) {
+          margin-bottom: 0;
+          justify-content: center;
+        }
+      }
+      .clear_button {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(5, 0, 56, 0.66);
+        position: relative;
+        width: 70px;
+        margin: 0 auto;
+        display: flex;
+        a {
+          align-items: center;
+          gap: 6px;
+          justify-content: center;
+        }
+  
+        &::before {
+          display: block;
+          content: "";
+          width: 100%;
+          height: 2px;
+          border-top: 2px dashed #f1f1f1;
+          top: -13px;
+          position: absolute;
+        }
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        padding: 20px 15px;
+        width: calc(38% - 10px);
+      }
+  
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        order: 2;
+        padding: 20px 30px 20px 25px;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 12px 0;
+      }
+    }
+    .card_action {
+      margin-bottom: 13px;
+  
+      .music_manage_list {
+        height: 200px;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+  
+        &::-webkit-scrollbar-thumb {
+          border-radius: 25px;
+        }
+      }
+  
+      .music_manage {
+        display: flex;
+        align-items: center;
+  
+        .manage_button {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          margin-right: 5px;
+        }
+        .time {
+          margin: 0 27px 0 12px;
+          position: relative;
+  
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            right: -12px;
+            height: 100%;
+            width: 1px;
+            background-color: #d7d7dd;
+          }
+        }
+  
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          .manage_button {
+            flex: 0 0 auto;
+            width: 38%;
+            gap: 0 7px;
+          }
+  
+          & > img {
+            width: 25%;
+            margin-right: 5px;
+          }
+        }
+        @media screen and (max-width: 992px) {
+          & > img {
+            width: 65%;
+            max-width: 65%;
+            height: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+      @media screen and (max-width: 500px) {
+        display: none;
+      }
+    }
+    .music_edit_block {
+      background: #ffffff;
+      border: 1px solid #cdccd7;
+      border-radius: 27px;
+      position: fixed;
+      left: 130px;
+      bottom: 30px;
+      right: 16px;
+  
+      .block_top {
+        padding: 9px 40px 10px 40px;
+        border-bottom: 1px solid rgba(205, 204, 215, 0.72);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #928fa8;
+        position: relative;
+        gap: 56px;
+  
+        .music_duration {
+          @media screen and (max-width: 500px) {
+            display: none;
+          }
+        }
+        .ritm {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          .close_button {
+            display: none;
+  
+            @media screen and (max-width: 992px) {
+              display: flex;
+            }
+          }
+        }
+        @media screen and (max-width: 744px) {
+          gap: 0;
+          justify-content: space-between;
+          padding: 12px 15px;
+        }
+      }
+      .play {
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 17px;
+        color: #050038;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+  
+        @media screen and (max-width: 500px) {
+          order: 2;
+  
+          svg {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+          }
+        }
+        @media screen and (min-width: 500px) and (max-width: 520px) {
+          gap: 5px;
+        }
+      }
+      .block_middle {
+        padding: 48px 48px 30px 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        background-color: #ffffff;
+  
+        .switch_button {
+          display: none;
+  
+          @media screen and (max-width: 992px) {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            background: #ebedf8;
+            border-radius: 7px;
+            padding: 6px 0;
+          }
+        }
+        .music_instrument {
+          padding: 5px 0 7px 0;
+          display: flex;
+          align-items: center;
+          background: #7e8cea;
+          border-radius: 7px;
+          position: relative;
+  
+          .music_timeline {
+            width: 100%;
+            height: 25px;
+          }
+          .left_box {
+            position: absolute;
+            margin-top: -5px;
+            margin-bottom: -7px;
+            background: rgba(11, 15, 38, 0.25);
+            width: 44px;
+            height: 33px;
+            margin-right: 7px;
+            border-radius: 7px 0 0 7px;
+          }
+          .right_box {
+            position: absolute;
+            right: 0;
+            display: flex;
+            height: 33px;
+          }
+          .close_button {
+            position: absolute;
+            top: 11px;
+            right: -23px;
+  
+            @media screen and (max-width: 992px) {
+              display: none;
+            }
+          }
+          .time {
+            position: absolute;
+            top: -36px;
+            left: 90px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+          }
+          &::before {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 88px;
+            background-color: #000;
+            left: 100px;
+            bottom: -31px;
+            border-radius: 25px;
+  
+            @media screen and (max-width: 1280px) {
+              height: 70px;
+            }
+          }
+        }
+  
+        @media screen and (max-width: 1280px) {
+          padding: 42px 45px 25px 45px;
+        }
+        @media screen and (max-width: 992px) {
+          padding: 50px 30px 40px 30px;
+        }
+        @media screen and (max-width: 500px) {
+          padding: 30px 12px;
+        }
+      }
+      .block_bottom {
+        border-top: 1px solid #cdccd7;
+        padding: 10px 40px 7px 40px;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        align-items: center;
+  
+        .volume {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+  
+          img {
+            @media screen and (max-width: 500px) {
+              display: none;
+            }
+          }
+          input {
+            background-color: transparent;
+            margin: 0;
+  
+            @media screen and (max-width: 992px) {
+              width: 90px;
+            }
+            @media screen and (min-width: 500px) and (max-width: 700px) {
+              width: 60px;
+            }
+            @media screen and (max-width: 500px) {
+              width: 70px;
+            }
+          }
+          @media screen and (max-width: 500px) {
+            gap: 5px;
+          }
+          @media screen and (min-width: 500px) and (max-width: 580px) {
+            gap: 5px;
+          }
+        }
+        .switch_button {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+  
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
+        }
+        .smooth_row {
+          display: flex;
+          gap: 25px;
+  
+          .smooth_item {
+            display: flex;
+            gap: 6px;
+            align-items: center;
+  
+            input {
+              width: 65px;
+              background-color: transparent;
+  
+              @media screen and (max-width: 500px) {
+                width: 50px;
+              }
+              @media screen and (min-width: 500px) and (max-width: 580px) {
+                width: 50px;
+              }
+            }
+  
+            &:nth-child(2) {
+              @media screen and (max-width: 500px) {
+                display: none;
+              }
+            }
+          }
+          @media screen and (min-width: 500px) and (max-width: 700px) {
+            gap: 5px;
+          }
+        }
+        @media screen and (max-width: 992px) {
+          padding: 25px 30px;
+        }
+        @media screen and (max-width: 744px) {
+          padding: 20px 10px;
+        }
+        @media screen and (max-width: 500px) {
+          padding: 15px 12px;
+        }
+      }
+  
+      @media screen and (max-width: 1280px) {
+        width: calc(100% - 30px);
+        right: 15px;
+        left: auto;
+      }
+      @media screen and (max-width: 992px) {
+        order: 1;
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    .library_card {
+      padding: 34px 12px 61px 28px;
+      background: #ffffff;
+      border: 1px solid #cdccd7;
+      border-radius: 14px;
+      position: relative;
+  
+      .card_top {
+        display: none;
+        gap: 45px;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .library_text {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+        }
+  
+        .library_control {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+          .search {
+            height: 28px;
+            width: 120px;
+            background: #f0f0f3;
+            border: 1px solid #c5c4d1;
+            border-radius: 6px;
+            outline: none;
+            padding: 6px 0 7px 11px;
+  
+            &::placeholder {
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 14px;
+              color: rgba(5, 0, 56, 0.23);
+            }
+          }
+          .music_control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+          }
+          input {
+            width: 190px;
+            background-color: transparent;
+          }
+          .control_buttons {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+          }
+          .time {
+            display: flex;
+            align-items: center;
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          display: flex;
+          padding-right: 30px;
+        }
+        @media screen and (max-width: 1025px) {
+          gap: 15px;
+        }
+        @media screen and (max-width: 992px) {
+          display: none;
+        }
+      }
+      .library_title {
+        position: absolute;
+        top: 30px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: #050038;
+        left: 30px;
+        .logo {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+        }
+  
+        .more {
+          display: none;
+  
+          @media screen and (max-width: 992px) {
+            display: flex;
+            position: absolute;
+            top: 23px;
+            right: 30px;
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+        @media screen and (max-width: 992px) {
+          display: flex;
+          position: static;
+          margin-bottom: 20px;
+          justify-content: space-between;
+        }
+        @media screen and (max-width: 500px) {
+          margin-bottom: 0;
+          justify-content: center;
+          gap: 50%;
+        }
+      }
+      .library {
+        display: flex;
+        gap: 89px;
+        align-items: center;
+  
+        @media screen and (max-width: 992px) {
+          gap: 120px;
+        }
+        @media screen and (max-width: 744px) {
+          gap: 82px;
+        }
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+      .library_list {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        position: relative;
+  
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 100%;
+          width: 3px;
+          background-color: rgba(189, 190, 191, 0.21);
+          top: 0;
+          right: -31px;
+  
+          @media screen and (max-width: 992px) {
+            right: -60px;
+          }
+          @media screen and (max-width: 744px) {
+            right: -50px;
+          }
+        }
+      }
+      .music_item_list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        overflow: auto;
+        height: 330px;
+  
+        .recommended_row,
+        .all_row {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+        .all_row {
+          .music_title {
+            &::before {
+              left: 25px;
+              width: 90%;
+            }
+          }
+        }
+        .music_title {
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 17px;
+          color: rgba(5, 0, 56, 0.23);
+          position: relative;
+          overflow: hidden;
+  
+          &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            height: 2px;
+            width: 77%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            border-top: 2px dashed #f1f1f1;
+            left: 100px;
+          }
+        }
+        .music_item {
+          display: flex;
+          align-items: center;
+          padding-right: 22px;
+  
+          img {
+            @media screen and (max-width: 1280px) {
+              width: 55%;
+            }
+            @media screen and (min-width: 500px) and (max-width: 620px) {
+              width: 36%;
+            }
+          }
+          .manage_button {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            margin-right: 15px;
+  
+            img {
+              width: inherit;
+            }
+          }
+          .time {
+            margin: 0 27px 0 12px;
+            position: relative;
+  
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              right: -12px;
+              height: 100%;
+              width: 1px;
+              background-color: #d7d7dd;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 1280px) {
+        padding: 20px 15px;
+        flex: 0 0 auto;
+        width: 62%;
+        &::-webkit-scrollbar-thumb {
+          border-radius: 25px;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        padding: 20px 30px 20px 25px;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 12px 0;
+      }
+    }
+    .content_music {
+      width: calc(100% - 116px);
+      padding: 15px;
+      margin-left: auto;
+      margin-top: 66px;
+      min-height: calc(100vh + 190px);
+      .library_control_2 {
+        border-top: 1px solid rgba(205, 204, 215, 0.72);
+        border-bottom: 1px solid rgba(205, 204, 215, 0.72);
+        position: fixed;
+        bottom: 72px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        padding: 20px 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: #f3f3f6;
+        gap: 42px;
+  
+        .search {
+          height: 28px;
+          width: 120px;
+          background: #f0f0f3;
+          border: 1px solid #c5c4d1;
+          border-radius: 6px;
+          outline: none;
+          padding: 6px 0 7px 11px;
+  
+          &::placeholder {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: rgba(5, 0, 56, 0.23);
+          }
+  
+          @media screen and (max-width: 500px) {
+            display: none;
+          }
+        }
+        .music_control {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
+        input {
+          width: 190px;
+          background-color: transparent;
+        }
+        .control_buttons {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+        .time {
+          display: flex;
+          align-items: center;
+        }
+  
+        @media screen and (max-width: 992px) {
+          display: flex;
+          order: 4;
+        }
+      }
+  
+      @media screen and (max-width: 1280px) {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+      @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      @media screen and (max-width: 744px) {
+        padding: 10px;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 15px 20px;
+      }
+      @media screen and (max-width: 390px) {
+        padding: 13px 5px;
+      }
+    }
+  }
+  

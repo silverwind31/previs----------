@@ -1,0 +1,465 @@
+// SECTION MAIN START PAGE
+.main {
+  .menu_sidebar {
+    padding: 28px 20px;
+    flex: 0 0 auto;
+    width: 116px;
+    border-right: 2px solid #cdccd7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
+    height: 100vh;
+    top: 0;
+
+    .menu_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      a:hover {
+        svg path {
+          fill: #eb555c;
+        }
+      }
+    }
+    .scenes_menu,
+    .start_menu_button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .logo {
+      margin-bottom: 49px;
+    }
+    .scenes_menu {
+      margin-bottom: 46px;
+    }
+    .start_menu_button {
+      &:hover {
+        svg path:nth-child(n + 2) {
+          fill: white;
+        }
+      }
+    }
+    .upgrade {
+      flex-direction: column;
+      gap: 8px;
+    }
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
+  }
+  .top_menu {
+    .top_menu_row,
+    .top_menu_right,
+    .top_menu_left,
+    .menu_list,
+    .profile_settings {
+      display: flex;
+      align-items: center;
+    }
+    .top_menu_row {
+      min-height: 66px;
+      border-bottom: 2px solid #cdccd7;
+      position: fixed;
+      width: calc(100% - 116px);
+      margin-left: 116px;
+      z-index: 1000;
+      background-color: #ffffff;
+      top: 0;
+      padding: 23px 39px 22px 26px;
+      overflow: auto;
+      justify-content: space-between;
+
+      @media screen and (max-width: 1280px) {
+        width: 100%;
+        margin-left: auto;
+        padding: 14px 27px;
+      }
+      @media screen and (max-width: 992px) {
+        border-width: 1px;
+        gap: 0;
+      }
+      @media screen and (max-width: 576px) {
+        padding: 14px 24px;
+        gap: 30px;
+      }
+    }
+    .menu_list {
+      align-items: center;
+      gap: 25px;
+
+      .list_item {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: #c5c4cb;
+        gap: 10px;
+        white-space: nowrap;
+
+        &:hover {
+          color: #050038;
+          svg path {
+            fill: #eb555c;
+            opacity: 1;
+          }
+          &:nth-child(2) {
+            svg path:nth-child(2) {
+              fill: #fff;
+            }
+            svg path:nth-child(3) {
+              fill: #fff;
+            }
+          }
+          @media screen and (max-width: 992px) {
+            color: #eb555c;
+          }
+        }
+      }
+      @media screen and (max-width: 576px) {
+        gap: 15px;
+      }
+    }
+    .top_menu_left {
+      gap: 52px;
+      position: relative;
+      .actions_block,
+      .tutorial {
+        display: flex;
+        align-items: center;
+        gap: 54px;
+      }
+      .actions_block {
+        @media screen and (max-width: 1280px) {
+          display: none;
+        }
+      }
+      .tutorial {
+        gap: 6px;
+        position: relative;
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          height: 30px;
+          width: 2px;
+          left: -27px;
+          background-color: #cdccd7;
+        }
+      }
+      .logo,
+      .menu_list {
+        display: none;
+
+        @media screen and (max-width: 1280px) {
+          display: flex;
+        }
+      }
+      &::before {
+        content: "";
+        display: none;
+        position: absolute;
+        height: 30px;
+        width: 2px;
+        left: 74px;
+        background-color: #cdccd7;
+
+        @media screen and (max-width: 1280px) {
+          display: block;
+        }
+      }
+      @media screen and (max-width: 625px) {
+        gap: 36px;
+
+        &::before {
+          left: 64px;
+        }
+      }
+    }
+    .top_menu_right {
+      gap: 25px;
+      .tutorial {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+
+        .watch_button {
+          white-space: nowrap;
+
+          @media screen and (max-width: 390px) {
+            display: none;
+          }
+        }
+        .question_item {
+          display: none;
+
+          @media screen and (max-width: 992px) {
+            display: flex;
+          }
+          @media screen and (max-width: 390px) {
+            display: none;
+          }
+        }
+      }
+      .more_actions,
+      .tutorial {
+        display: none;
+
+        @media screen and (max-width: 1280px) {
+          display: flex;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+      .tutorial::before {
+        display: none;
+      }
+      .hamburger_menu {
+        display: none;
+
+        @media screen and (max-width: 992px) {
+          display: flex;
+        }
+        @media screen and (max-width: 500px) {
+          display: 390;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        gap: 21px;
+        .more_actions {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 390px) {
+        display: none;
+      }
+    }
+    .profile_settings {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #928fa8;
+      gap: 14px;
+
+      @media screen and (max-width: 1280px) {
+        .profile_name {
+          display: none;
+        }
+      }
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+    .new_scene_button {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+      color: #3f53d9;
+    }
+  }
+  .content {
+    padding: 0 10px;
+    background-color: #f0f0f3;
+    min-height: calc(100vh + 66px);
+    margin-left: 116px;
+    margin-top: 66px;
+    transition: 0.5s all ease;
+
+    .template_title {
+      @media screen and (max-width: 1280px) {
+        padding: 13px 0 14px 0;
+        font-size: 14px;
+      }
+      @media screen and (max-width: 1130px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 1025px) {
+        padding: 13px 0 10px 0;
+      }
+      .template_numbers {
+        @media screen and (max-width: 500px) {
+          display: none;
+        }
+      }
+    }
+    .service_cards {
+      display: flex;
+      align-items: stretch;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 0;
+
+      @media screen and (max-width: 1280px) {
+        gap: 18px 0;
+      }
+      @media screen and (max-width: 1130px) {
+        gap: 11px 0;
+      }
+      @media screen and (max-width: 500px) {
+        justify-content: center;
+        gap: 16px;
+      }
+    }
+    .card_item {
+      flex: 0 0 auto;
+      width: calc(100% / 3 - 15px);
+      cursor: pointer;
+      display: flex;
+      padding: 10px 11px;
+      flex-direction: column;
+      background: #ffffff;
+      border: 2px solid rgba(5, 0, 56, 0.35);
+      overflow: hidden;
+      border-radius: 16px;
+      transition: 0.3s all ease;
+
+      .item_texts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 10px 13px 18px;
+        font-size: 14px;
+        line-height: 17px;
+
+        .item_title {
+          font-weight: 700;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          @media screen and (max-width: 1050px) {
+            width: 162px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          @media screen and (max-width: 940px) {
+            width: auto;
+          }
+          @media screen and (max-width: 744px) {
+            width: auto;
+          }
+          @media screen and (max-width: 650px) {
+            width: 162px;
+          }
+          @media screen and (max-width: 390px) {
+            width: auto;
+          }
+        }
+        .item_duration {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        @media screen and (max-width: 1280px) {
+          padding: 10px 8px 10px 15px;
+        }
+        @media screen and (max-width: 1130px) {
+          padding: 12px 8px 18px 8px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        @media screen and (max-width: 992px) {
+          padding: 10px 8px 18px 8px;
+          font-size: 13px;
+        }
+        @media screen and (max-width: 744px) {
+          font-size: 14px;
+        }
+      }
+      .item_image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          max-width: 100%;
+          width: 100%;
+        }
+        .tablet_image {
+          display: none;
+
+          @media screen and (max-width: 992px) {
+            display: block;
+          }
+        }
+        .laptop_image {
+          @media screen and (max-width: 992px) {
+            display: none;
+          }
+        }
+      }
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.5);
+        border: 2px solid #eb555c;
+        border-radius: 16px;
+        outline: none;
+      }
+      @media screen and (min-width: 1600px) {
+        width: calc(100% / 4 - 10px);
+      }
+      @media screen and (max-width: 1130px) {
+        padding: 8px 9.5px 0 10px;
+        width: calc(100% / 3 - 11px);
+      }
+      @media screen and (max-width: 1025px) {
+        padding: 7px 9px 0 9px;
+        width: calc(100% / 3 - 10px);
+      }
+      @media screen and (max-width: 992px) {
+        width: calc(33.3333% - 6px);
+      }
+      @media screen and (max-width: 744px) {
+        width: calc(50% - 6px);
+      }
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 1280px) {
+      margin-left: auto;
+      width: 100%;
+      margin-top: 66px;
+      padding: 0 24px;
+    }
+    @media screen and (max-width: 1130px) {
+      padding: 0 20px;
+    }
+    @media screen and (max-width: 1025px) {
+      padding: 0 14px;
+    }
+    @media screen and (max-width: 576px) {
+      padding: 0 14px;
+      min-height: calc(100vh + 138px);
+      margin-bottom: 100px;
+    }
+  }
+  .bottom_action.scenes {
+    display: none;
+    justify-content: space-between;
+    padding: 33px 28px 33px 34px;
+    max-height: 83px;
+    .tutorial {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    @media screen and (max-width: 390px) {
+      display: flex;
+    }
+  }
+}
